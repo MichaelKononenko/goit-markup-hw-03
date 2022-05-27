@@ -3,6 +3,7 @@
   --team-background-color: #f5f4fa;
   --hero-color: #2f303a;
   --hero-text-color: #ffffff;
+  --hero-button-hover-color: #188ce8;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --action-color: #2196f3;
@@ -28,7 +29,7 @@ body {
 .header {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 .logo {
@@ -36,7 +37,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-decoration: none;
 }
 .logo-web {
@@ -73,7 +74,7 @@ body {
   background-color: var(--footer-background-color);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.71;
   color: var(--footer-text-color);
 }
 
@@ -110,7 +111,7 @@ body {
 .hero-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.4;
+  line-height: 1.36;
   text-transform: uppercase;
   color: var(--hero-text-color);
 }
@@ -118,26 +119,32 @@ body {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.88;
   align-items: center;
   color: var(--hero-text-color);
   background-color: var(--action-color);
 }
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--hero-button-hover-color);
+}
 
 .about {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.14;
 }
 .about-title {
   text-transform: uppercase;
 }
 .about-text {
+  font-size: 14px;
+  line-height: 1.71;
   color: var(--secondary-text-color);
 }
 
 .galery-title {
   font-size: 36px;
-  line-height: 1.6;
+  line-height: 1.67;
   text-align: center;
 }
 
@@ -149,34 +156,42 @@ body {
 }
 .team-title {
   font-size: 36px;
-  line-height: 1.6;
+  line-height: 1.67;
   text-align: center;
 }
 .team-person {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
 }
 .team-position {
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
 }
 
 /* оформление портфолио */
-.page-nav-item {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
+
 .page-nav .button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.63;
+  text-align: center;
   background-color: var(--nav-button-backgroud-color);
   border: none;
   cursor: pointer;
@@ -198,6 +213,6 @@ body {
 }
 .projects-text {
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.88;
   color: var(--secondary-text-color);
 }
