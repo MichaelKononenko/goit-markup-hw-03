@@ -13,6 +13,21 @@
   --nav-button-backgroud-color: #f5f4fa;
 }
 
+/* сброс стилей */
+h1,
+h2,
+h3,
+p {
+  margin: 0 0;
+}
+
+/* дополнительные общие стили */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   color: var(--primary-text-color);
   background-color: var(--primary-background-color);
@@ -20,9 +35,13 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* дополнительные общие стили */
-.list {
-  list-style: none;
+/* основной контейнер */
+.container {
+  display: flex;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 200px;
+  background-color: violet;
 }
 
 /* оформление шапки */
@@ -31,6 +50,16 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.header .container {
+  align-items: center;
+}
+
+.header .logo {
+  display: block;
+  padding: 24px 0 25px 0;
+  margin-right: 93px;
 }
 .logo {
   color: var(--primary-text-color);
@@ -44,17 +73,37 @@ body {
   color: var(--action-color);
 }
 
+.site-nav .list {
+  display: flex;
+}
+
 .site-nav-link {
+  display: block;
+  padding: 32px 0;
   color: var(--primary-text-color);
   text-decoration: none;
 }
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav-link:hover,
 .site-nav-link:focus {
   color: var(--action-color);
 }
 
+.contacts.list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-mail {
+  margin-right: 50px;
+}
 .header-mail,
 .header-telephone {
+  display: block;
+  padding: 32px 0;
   color: var(--secondary-text-color);
   text-decoration: none;
 }
@@ -71,6 +120,7 @@ body {
 
 /* оформление подвала */
 .footer {
+  width: 1600px;
   background-color: var(--footer-background-color);
   font-weight: 400;
   font-size: 14px;
@@ -78,8 +128,17 @@ body {
   color: var(--footer-text-color);
 }
 
+.footer .container {
+  padding: 60px 15px;
+  flex-direction: column;
+}
+
 .address {
   font-style: normal;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
 }
 
 .logo-footer {
@@ -87,11 +146,17 @@ body {
 }
 
 .location {
+  margin-bottom: 9px;
   color: var(--footer-text-color);
+}
+
+.footer li:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-mail,
 .footer-telephone {
+  display: block;
   color: var(--footer-contacts-color);
   text-decoration: none;
 }
@@ -104,11 +169,15 @@ body {
 
 /* оформление студии */
 .hero {
+  width: 1600px;
   background-color: var(--hero-color);
   text-align: center;
   letter-spacing: 0.06em;
 }
 .hero-title {
+  outline: 1px dashed gold;
+  width: 670px;
+  margin: 0 auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
