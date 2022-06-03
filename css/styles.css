@@ -12,6 +12,9 @@
   --footer-text-color: #ffffff;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --nav-button-backgroud-color: #f5f4fa;
+  --page-nav-shadow-set: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --projects-border-color: #eeeeee;
 }
 
 /* сброс стилей */
@@ -42,7 +45,6 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  /* background-color: violet; */
 }
 
 /* оформление шапки */
@@ -155,6 +157,9 @@ body {
   margin-bottom: 9px;
 }
 
+.footer .list {
+  flex-direction: column;
+}
 .footer-mail,
 .footer-telephone {
   display: block;
@@ -295,7 +300,22 @@ body {
   margin: -1px;
 }
 
+.portfolio-filter {
+  padding: 94px 0;
+}
+
+.portfolio-filter .container {
+  flex-direction: column;
+}
+
+.page-nav.list {
+  margin: 0 auto 50px;
+}
+.page-nav-item:not(:last-child) {
+  margin-right: 8px;
+}
 .page-nav .button {
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -307,12 +327,31 @@ body {
 }
 .page-nav .button:hover,
 .page-nav .button:focus {
+  box-shadow: var(--page-nav-shadow-set);
   background-color: var(--action-color);
   color: var(--primary-background-color);
 }
 .page-nav .current {
+  box-shadow: var(--page-nav-shadow-set);
   background-color: var(--action-color);
   color: var(--primary-background-color);
+}
+
+.projects.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.projects-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  outline: 1px solid var(--projects-border-color);
+}
+
+.projects-description {
+  padding: 20px 20px;
 }
 
 .projects-title {
@@ -321,7 +360,12 @@ body {
   letter-spacing: 0.06em;
 }
 .projects-text {
+  margin-top: 20px;
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-color);
+}
+.projects-image {
+  display: block;
+  width: 100%;
 }
