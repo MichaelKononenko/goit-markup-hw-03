@@ -1,6 +1,6 @@
 :root {
   --primary-background-color: #ffffff;
-  --header-shadov-color: rgba(0, 0, 0, 0.25);
+  --header-border-color: #ececec;
   --team-background-color: #f5f4fa;
   --hero-color: #2f303a;
   --hero-text-color: #ffffff;
@@ -49,15 +49,12 @@ body {
 
 /* оформление шапки */
 .header {
+  align-items: center;
+  border-bottom: 1px solid var(--header-border-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-
-.header .container {
-  align-items: center;
-  box-shadow: 0px 4px 4px var(--header-shadov-color);
 }
 
 .header .logo {
@@ -101,7 +98,7 @@ body {
   margin-left: auto;
 }
 
-.header-mail {
+.header-contact-item:first-of-type {
   margin-right: 50px;
 }
 .header-mail,
@@ -124,6 +121,7 @@ body {
 
 /* оформление подвала */
 .footer {
+  padding: 60px 0;
   background-color: var(--footer-background-color);
   font-weight: 400;
   font-size: 14px;
@@ -132,7 +130,6 @@ body {
 }
 
 .footer .container {
-  padding: 60px 15px;
   flex-direction: column;
 }
 
@@ -207,10 +204,7 @@ body {
 .about {
   font-size: 14px;
   line-height: 1.14;
-}
-
-.about .container {
-  padding: 94px 15px;
+  padding: 94px 0;
 }
 
 .container .list {
@@ -233,6 +227,10 @@ body {
 .galery {
   padding-bottom: 94px;
 }
+
+.galery .container {
+  flex-direction: column;
+}
 .galery-title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -251,6 +249,9 @@ body {
   padding: 94px 0;
   background-color: var(--team-background-color);
 }
+.team .container {
+  flex-direction: column;
+}
 .team-title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -258,7 +259,7 @@ body {
   text-align: center;
 }
 
-.team-item {
+.team-container {
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -313,14 +314,18 @@ body {
 .page-nav-item:not(:last-child) {
   margin-right: 8px;
 }
+
 .page-nav .button {
+  display: block;
+  padding: 6px 22px;
+  height: 38px;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
-  text-align: center;
   background-color: var(--nav-button-backgroud-color);
+  text-align: center;
   border: none;
   cursor: pointer;
 }
@@ -359,7 +364,7 @@ body {
   letter-spacing: 0.06em;
 }
 .projects-text {
-  margin-top: 20px;
+  margin-top: 4px;
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-color);
